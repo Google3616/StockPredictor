@@ -1,0 +1,199 @@
+{
+    "apple": {
+      "parent_company": "Apple Inc.",
+      "ticker": "AAPL"
+    },
+    "microsoft": {
+      "parent_company": "Microsoft Corporation",
+      "ticker": "MSFT"
+    },
+    "google": {
+      "parent_company": "Alphabet Inc.",
+      "ticker": "GOOGL"
+    },
+    "youtube": {
+      "parent_company": "Alphabet Inc.",
+      "ticker": "GOOGL"
+    },
+    "facebook": {
+      "parent_company": "Meta Platforms, Inc.",
+      "ticker": "META"
+    },
+    "instagram": {
+      "parent_company": "Meta Platforms, Inc.",
+      "ticker": "META"
+    },
+    "whatsapp": {
+      "parent_company": "Meta Platforms, Inc.",
+      "ticker": "META"
+    },
+    "amazon": {
+      "parent_company": "Amazon.com, Inc.",
+      "ticker": "AMZN"
+    },
+    "twitch": {
+      "parent_company": "Amazon.com, Inc.",
+      "ticker": "AMZN"
+    },
+    "whole foods": {
+      "parent_company": "Amazon.com, Inc.",
+      "ticker": "AMZN"
+    },
+    "tesla": {
+      "parent_company": "Tesla, Inc.",
+      "ticker": "TSLA"
+    },
+    "spacex": {
+      "parent_company": "Space Exploration Technologies Corp.",
+      "ticker": "Private"
+    },
+    "netflix": {
+      "parent_company": "Netflix, Inc.",
+      "ticker": "NFLX"
+    },
+    "disney": {
+      "parent_company": "The Walt Disney Company",
+      "ticker": "DIS"
+    },
+    "nike": {
+      "parent_company": "Nike, Inc.",
+      "ticker": "NKE"
+    },
+    "adidas": {
+      "parent_company": "Adidas AG",
+      "ticker": "ADDYY"
+    },
+    "puma": {
+      "parent_company": "Puma SE",
+      "ticker": "PUMSY"
+    },
+    "coca-cola": {
+      "parent_company": "The Coca-Cola Company",
+      "ticker": "KO"
+    },
+    "pepsi": {
+      "parent_company": "PepsiCo, Inc.",
+      "ticker": "PEP"
+    },
+    "mountain dew": {
+      "parent_company": "PepsiCo, Inc.",
+      "ticker": "PEP"
+    },
+    "doritos": {
+      "parent_company": "PepsiCo, Inc.",
+      "ticker": "PEP"
+    },
+    "lay's": {
+      "parent_company": "PepsiCo, Inc.",
+      "ticker": "PEP"
+    },
+    "starbucks": {
+      "parent_company": "Starbucks Corporation",
+      "ticker": "SBUX"
+    },
+    "mcdonald's": {
+      "parent_company": "McDonald's Corporation",
+      "ticker": "MCD"
+    },
+    "burger king": {
+      "parent_company": "Restaurant Brands International Inc.",
+      "ticker": "QSR"
+    },
+    "kfc": {
+      "parent_company": "Yum! Brands, Inc.",
+      "ticker": "YUM"
+    },
+    "taco bell": {
+      "parent_company": "Yum! Brands, Inc.",
+      "ticker": "YUM"
+    },
+    "pizza hut": {
+      "parent_company": "Yum! Brands, Inc.",
+      "ticker": "YUM"
+    },
+    "subway": {
+      "parent_company": "Doctor's Associates Inc.",
+      "ticker": "Private"
+    },
+    "wendy's": {
+      "parent_company": "The Wendy's Company",
+      "ticker": "WEN"
+    },
+    "chipotle": {
+      "parent_company": "Chipotle Mexican Grill, Inc.",
+      "ticker": "CMG"
+    },
+    "domino's": {
+      "parent_company": "Domino's Pizza, Inc.",
+      "ticker": "DPZ"
+    },
+    "samsung": {
+      "parent_company": "Samsung Electronics Co., Ltd.",
+      "ticker": "005930.KS"
+    },
+    "sony": {
+      "parent_company": "Sony Group Corporation",
+      "ticker": "SONY"
+    },
+    "lg": {
+      "parent_company": "LG Electronics Inc.",
+      "ticker": "066570.KS"
+    },
+    "honda": {
+      "parent_company": "Honda Motor Co., Ltd.",
+      "ticker": "HMC"
+    },
+    "toyota": {
+      "parent_company": "Toyota Motor Corporation",
+      "ticker": "TM"
+    },
+    "ford": {
+      "parent_company": "Ford Motor Company",
+      "ticker": "F"
+    },
+    "chevrolet": {
+      "parent_company": "General Motors Company",
+      "ticker": "GM"
+    },
+    "bmw": {
+      "parent_company": "Bayerische Motoren Werke AG",
+      "ticker": "BMW.DE"
+    },
+    "mercedes-benz": {
+      "parent_company": "Daimler AG",
+      "ticker": "DAI.DE"
+    },
+    "audi": {
+      "parent_company": "Volkswagen AG",
+      "ticker": "VOW.DE"
+    },
+    "volkswagen": {
+      "parent_company": "Volkswagen AG",
+      "ticker": "VOW.DE"
+    },
+    "hyundai": {
+      "parent_company": "Hyundai Motor Company",
+      "ticker": "005380.KS"
+    },
+    "nissan": {
+      "parent_company": "Nissan Motor Co., Ltd.",
+      "ticker": "7201.T"
+    },
+    "intel": {
+      "parent_company": "Intel Corporation",
+      "ticker": "INTC"
+    },
+    "amd": {
+      "parent_company": "Advanced Micro Devices, Inc.",
+      "ticker": "AMD"
+    },
+    "nvidia": {
+      "parent_company": "NVIDIA Corporation",
+      "ticker": "NVDA"
+    },
+    "ibm": {
+      "parent_company": "International Business Machines Corporation",
+      "ticker": "IBM"
+    }
+  }
+  
