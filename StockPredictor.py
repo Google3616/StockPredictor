@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 def analyze_reddit_sentiment(numPosts):
     # Initialize JSON files
-    with open('reddit_credentials.json', 'r') as file:
+    with open('reddit_credentials_silly!.json', 'r') as file:
         try:
             reddit_credentials = json.load(file)
             print("JSON loaded successfully:", reddit_credentials)
