@@ -16,7 +16,7 @@ class StockPredictor:
     def _derivativeToDates(self, d, dates):
         return {str(dates[i].date()): d[i] for i in range(len(d))}
 
-    def predictStocks(self,plot=False):
+    def predictStocks(self,scale=2,LOD=10,daysAhead = 1,plot=False):
         # Define the stock ticker
         detail = 3
 
@@ -26,36 +26,36 @@ class StockPredictor:
         historical_data = stock.history(start=self.startDate, end=date.today())  # Update the end date as needed
 
         detail = round((max(historical_data["Close"]) - min(historical_data["Close"])) / 60) *0.5
-        cost = [round(x/detail)*detail for x in historical_data['Close']]
+        cost = [round(x/scale)*scale for x in historical_data['Close']]
 
 
         derivative = [(list(cost)[x+1]-list(cost)[x]) for x in range(len(cost)-1)]
         #{(date.fromisoformat(startDate)+timedelta(days=x):derivative[x]) for x in range(len(derivative))}
         derivativeDates = self._derivativeToDates(derivative,historical_data.index[1:])
         #print(derivativeDates)
-        LOD = 20
-
         combs = {}
-        for i in range(0,len(derivative)-LOD):
+        for i in range(0,len(derivative)-LOD-daysAhead+1):
             combs[i] = derivative[i:i+LOD]
 
         def checkForMatches(l):
             sum = 0
             abssum = 0
             for date,combo in enumerate(combs.values()): 
-                if combo == l:
+                if combo == l and (date + daysAhead + LOD - 1) <= len(derivative):
                     sum += derivative[date+1+LOD]
                     abssum += abs(derivative[date+1+LOD])
+                if daysAhead > 1:
+                    derivative.append(sum)
             try:
                 return(sum/abssum)
             except:
                 return 0
 
         sum = 0
-        for i in range(20,1,-1):
+        for i in range(LOD,1,-1):
             LOD = i
-            sum += checkForMatches(combs[len(combs)-2]) * (1.2 ** -(10-i))
-        print(sum)
+            sum += checkForMatches(combs[len(combs)-2]) * (2 ** -(LOD-i))
+        print((sum/(2*scale))/(1/scale))
         # Plot the closing pr
         #plt.plot(combs[3])
         #plt.show()
@@ -77,6 +77,7 @@ class StockPredictor:
             plt.show()
 
 
-Apple = StockPredictor(input("Stock?   "),"2000-01-01")
+Apple = StockPredictor(input("Stock?   "),"1970-01-01")
 
-Apple.predictStocks()
+for day in range(1,10):
+    Apple.predictStocks(3,15,day)
