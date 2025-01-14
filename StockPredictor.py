@@ -57,7 +57,7 @@ def analyze_reddit_sentiment(numPosts):
             # Analyze comments
             post.comments.replace_more(limit=0)
             for comment in post.comments.list():
-                ticker_sentiments.update(analyze_content(comment.body, company_pattern, company_mapping, sia, ticker_sentiments))
+                ticker_sentiments.update(analyze_content(comment.body, company_pattern, company_mapping, sia, ticker_sentiments,0.5))
             count+=1
             print(f"{count/(numPosts*len(subreddits))*100:.0f}% done scanning Reddit",end="\r")
             
@@ -70,7 +70,7 @@ def analyze_reddit_sentiment(numPosts):
 
 
 
-def analyze_content(content, company_pattern, company_mapping, sia, ticker_sentiments):
+def analyze_content(content, company_pattern, company_mapping, sia, ticker_sentiments,mult=1):
     tickers = {}
     # Find all company mentions in the content
     matches = company_pattern.findall(content)
@@ -80,7 +80,7 @@ def analyze_content(content, company_pattern, company_mapping, sia, ticker_senti
             parent_company_info = company_mapping[company_name]
             ticker = parent_company_info['ticker']
             # Perform sentiment analysis
-            sentiment_score = sia.polarity_scores(content)['compound'] * 0.5
+            sentiment_score = sia.polarity_scores(content)['compound'] * mult
             # Update sentiment scores for the ticker
             if ticker in tickers:
                 tickers[ticker].append(sentiment_score)
@@ -160,3 +160,5 @@ def run(stock):
 
     print(derivative[-1])
 
+
+#derivativeDates = self._derivativeToDates(derivative,historical_data.index[1:])
